@@ -1,0 +1,156 @@
+:root {
+    --azul: #1976d2;
+    --azul-claro: #e3f2fd;
+    --fundo: #f5f9fc;
+    --texto: #263238;
+    --branco: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Menu */
+nav {
+    background-color: var(--branco);
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--azul-claro);
+}
+
+/* Conteúdo */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: var(--branco);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+section h2 {
+    color: var(--azul);
+    margin-top: 0;
+}
+
+/* Especialidades */
+#especialidades ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#especialidades li {
+    background-color: var(--azul-claro);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--azul);
+    color: var(--branco);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f8fd;
+}
+
+/* Rodapé */
+footer {
+    background-color: #12344d;
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #especialidades ul {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
